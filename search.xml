@@ -24,7 +24,7 @@ git push https://git.coding.net/jiong/redis.git --all</code></pre><p>```</p>
 <p><a href="https://imgchr.com/i/loopzd" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2020/01/12/loopzd.md.jpg" alt="loopzd.md.jpg"></a></p>
 <h1 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h1><p>开始分流，国内的结点访问coding，国外的结点访问GitHub</p>
 <p>coding的主机记录值为 www ,记录类型为 CNAME ， 解析线路 默认 </p>
-<p><img src="C:%5CUsers%5C%E9%99%88%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200112172755527.png" alt="image-20200112172755527"></p>
+<p><a href="https://imgchr.com/i/loTAXR" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2020/01/12/loTAXR.md.jpg" alt="loTAXR.md.jpg"></a></p>
 ]]></content>
   </entry>
   <entry>
