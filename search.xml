@@ -4,12 +4,11 @@
     <title>python学习</title>
     <url>/2020/01/17/python%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h1 id="开始Python的学习之路"><a href="#开始Python的学习之路" class="headerlink" title="开始Python的学习之路"></a>开始Python的学习之路</h1><blockquote>
-<p>现在这里贴个网址 </p>
 <p><a href="https://github.com/jackfrued/Python-100-Days.git" target="_blank" rel="noopener">https://github.com/jackfrued/Python-100-Days.git</a></p>
 </blockquote>
 ]]></content>
       <tags>
-        <tag>python</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -38,6 +37,9 @@ git push https://git.coding.net/jiong/redis.git --all</code></pre><p>```</p>
 <p>coding的主机记录值为 www ,记录类型为 CNAME ， 解析线路 默认 </p>
 <p><a href="https://imgchr.com/i/loTAXR" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2020/01/12/loTAXR.md.jpg" alt="loTAXR.md.jpg"></a></p>
 ]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
@@ -104,7 +106,7 @@ git push https://git.coding.net/jiong/redis.git --all</code></pre><p>```</p>
   <entry>
     <title>第一篇博客</title>
     <url>/2019/09/10/hello-world/</url>
-    <content><![CDATA[<h1 id="Blog"><a href="#Blog" class="headerlink" title="Blog"></a>Blog</h1><h2 id="time"><a href="#time" class="headerlink" title="time"></a>time</h2><pre><code>这是一篇写于 2019-9-12 的一篇博客</code></pre><a id="more"></a>
-<h2 id="why"><a href="#why" class="headerlink" title="why"></a>why</h2><pre><code>为什么要写博客，给自己找一些事情做</code></pre>]]></content>
+    <content><![CDATA[<h1 id="Blog"><a href="#Blog" class="headerlink" title="Blog"></a>Blog</h1><p>  2019-9-12 ​    </p>
+]]></content>
   </entry>
 </search>
