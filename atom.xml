@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.pigwatcher.com/"/>
-  <updated>2020-03-11T05:34:44.483Z</updated>
+  <updated>2020-03-16T07:02:44.637Z</updated>
   <id>http://www.pigwatcher.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在配置tomcat和使用上踩的坑</title>
+    <link href="http://www.pigwatcher.com/2020/03/16/%E5%9C%A8%E9%85%8D%E7%BD%AEtomcat%E5%92%8C%E4%BD%BF%E7%94%A8%E4%B8%8A%E8%B8%A9%E7%9A%84%E5%9D%91/"/>
+    <id>http://www.pigwatcher.com/2020/03/16/%E5%9C%A8%E9%85%8D%E7%BD%AEtomcat%E5%92%8C%E4%BD%BF%E7%94%A8%E4%B8%8A%E8%B8%A9%E7%9A%84%E5%9D%91/</id>
+    <published>2020-03-16T06:54:37.000Z</published>
+    <updated>2020-03-16T07:02:44.637Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="在配置tomcat和使用上踩的坑"><a href="#在配置tomcat和使用上踩的坑" class="headerlink" title="在配置tomcat和使用上踩的坑"></a>在配置tomcat和使用上踩的坑</h1><a id="more"></a><h3 id="在eclipse上安装java-ee-插件"><a href="#在eclipse上安装java-ee-插件" class="headerlink" title="在eclipse上安装java ee 插件"></a>在eclipse上安装java ee 插件</h3><p>1.1 eclipse -&gt; Help -&gt; install new software</p><p>1.2 在work with 中输入 <code>2019-12 - http://download.eclipse.org/releases/2019-12</code></p><blockquote><p>这里要注意这儿链接 地址 是 <code>http://download.eclipse.org/releases/indigo+你eclipse的版本号</code>  版本号 : 打开 eclipse文件夹 — readme – readme_eclipse.html</p></blockquote><p>1.3 在最下面 （web,xml,java EE and OSGI…..）中选择，勾选  Web，XML,Java EE and OSG… ；然后 next 安装 ，之后重启 eclipse</p><p><img src="https://s1.ax1x.com/2020/03/16/8JZMvQ.png" alt="8JZMvQ.png"></p><p><a href="https://imgchr.com/i/8JZnC8" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/03/16/8JZnC8.png" alt="8JZnC8.png"></a></p><blockquote><p>引用网图</p></blockquote><h3 id="部署-tomcat"><a href="#部署-tomcat" class="headerlink" title="部署 tomcat"></a>部署 tomcat</h3><p>1.1 打开eclipse -&gt; Window -&gt; Preferences ，在里面找到 Server </p><p><a href="https://imgchr.com/i/8JZKgg" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/03/16/8JZKgg.md.png" alt="8JZKgg.md.png"></a></p><p>1.2 如图， 选择适合你自己的tomcat版本 ，进行部署</p><p><img src="https://s1.ax1x.com/2020/03/16/8JZu8S.png" alt="8JZu8S.png"></p><p>1.3 完成之后 ， 重启eclipse； 点击控制台的 server ，双击 </p><p><img src="https://s1.ax1x.com/2020/03/16/8JZe4f.png" alt="8JZe4f.png"></p><p>1.4 勾选如下配置，保存 ，重启，即可</p><p><img src="https://s1.ax1x.com/2020/03/16/8JZluj.png" alt="8JZluj.png"></p><h3 id="在后期的使用中也会出现一些部署tomcat上的错误"><a href="#在后期的使用中也会出现一些部署tomcat上的错误" class="headerlink" title="在后期的使用中也会出现一些部署tomcat上的错误:"></a>在后期的使用中也会出现一些部署tomcat上的错误:</h3><p>比如：</p><p>tomcat启动后，localhost:8080 能访问，但自己的项目却无法访问</p><p>在tomcat中 webapps 中应该是会有你的当前项目的文件夹， 如果没有 可以 将自己的项目导出，放道webapps中</p><p>在此启动tomcat ，就可以访问了</p><blockquote><p>如果实在不行 ，可以将tomcat 重新部署一次 ，记得删除server 项目</p></blockquote><p>希望本文章对你有用</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;在配置tomcat和使用上踩的坑&quot;&gt;&lt;a href=&quot;#在配置tomcat和使用上踩的坑&quot; class=&quot;headerlink&quot; title=&quot;在配置tomcat和使用上踩的坑&quot;&gt;&lt;/a&gt;在配置tomcat和使用上踩的坑&lt;/h1&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>将个人博客同时部署到Github和Coding</title>
