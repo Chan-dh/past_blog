@@ -475,6 +475,189 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.pigwatcher.com/2020/09/21/力扣-167/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chan_yolo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PigWatcher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/21/力扣-167/" itemprop="url">力扣-#167</a></h1>
+        
+
+        <div class="post-meta">
+			
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-21T21:10:27+08:00">
+                2020-09-21
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-09-21T21:14:18+08:00">
+                2020-09-21
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/09/21/力扣-167/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/09/21/力扣-167/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  112
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p><strong>每天一个简单题</strong></p>
+</blockquote>
+<h3 id="直接暴力法"><a href="#直接暴力法" class="headerlink" title="直接暴力法"></a>直接暴力法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, numbers: List[int], target: int)</span> -&gt; List[int]:</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(numbers)):</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>, len(numbers)):</span><br><span class="line">                <span class="keyword">if</span>(numbers[i]+numbers[j]) == target:</span><br><span class="line">                    index1, index2 = i+<span class="number">1</span>, j+<span class="number">1</span></span><br><span class="line">                    <span class="keyword">return</span> index1,index2</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>不得法：超时</p>
+</blockquote>
+<h3 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, numbers: List[int], target: int)</span> -&gt; List[int]:</span></span><br><span class="line"></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = len(numbers)<span class="number">-1</span></span><br><span class="line">        <span class="keyword">while</span> (left&lt;=right):</span><br><span class="line">            <span class="keyword">if</span> (numbers[left] + numbers[right]) == target:</span><br><span class="line">                <span class="keyword">return</span> left+<span class="number">1</span>, right+<span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> (numbers[left] + numbers[right]) &lt; target:</span><br><span class="line">                left = left + <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right = right - <span class="number">1</span> </span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.pigwatcher.com/2020/09/20/力扣-69/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -523,8 +706,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-09-20T20:37:06+08:00">
-                2020-09-20
+              <time title="更新于" itemprop="dateModified" datetime="2020-09-21T21:12:21+08:00">
+                2020-09-21
               </time>
             
           </span>
@@ -561,7 +744,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  45
+                  52
                 </span>
               
 
@@ -600,7 +783,10 @@
       
         
           
-            <h2 id="经典二分法"><a href="#经典二分法" class="headerlink" title="经典二分法"></a>经典二分法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mySqrt</span><span class="params">(self, x: int)</span> -&gt; int:</span></span><br><span class="line">        left, right = <span class="number">1</span>, x//<span class="number">2</span></span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(left &lt;= right):</span><br><span class="line">            mid = (left+right) // <span class="number">2</span></span><br><span class="line">           </span><br><span class="line">            <span class="keyword">if</span> mid*mid &lt;= x:  </span><br><span class="line">                ans = mid</span><br><span class="line">                left = mid + <span class="number">1</span></span><br><span class="line">                </span><br><span class="line">            <span class="keyword">else</span> :</span><br><span class="line">               right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+            <blockquote>
+<p><strong>每天一个简单题</strong></p>
+</blockquote>
+<h2 id="经典二分法"><a href="#经典二分法" class="headerlink" title="经典二分法"></a>经典二分法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mySqrt</span><span class="params">(self, x: int)</span> -&gt; int:</span></span><br><span class="line">        left, right = <span class="number">1</span>, x//<span class="number">2</span></span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(left &lt;= right):</span><br><span class="line">            mid = (left+right) // <span class="number">2</span></span><br><span class="line">           </span><br><span class="line">            <span class="keyword">if</span> mid*mid &lt;= x:  </span><br><span class="line">                ans = mid</span><br><span class="line">                left = mid + <span class="number">1</span></span><br><span class="line">                </span><br><span class="line">            <span class="keyword">else</span> :</span><br><span class="line">               right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
 
 
           
@@ -698,8 +884,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-09-20T20:34:49+08:00">
-                2020-09-20
+              <time title="更新于" itemprop="dateModified" datetime="2020-09-21T21:12:03+08:00">
+                2020-09-21
               </time>
             
           </span>
@@ -736,7 +922,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  135
+                  142
                 </span>
               
 
@@ -775,7 +961,10 @@
       
         
           
-            <h2 id="法1-哈希表求解"><a href="#法1-哈希表求解" class="headerlink" title="法1 . 哈希表求解"></a>法1 . 哈希表求解</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">intersect</span><span class="params">(self, nums1: List[int], nums2: List[int])</span> -&gt; List[int]:</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (len(nums1) &gt; len(nums2)):</span><br><span class="line">            <span class="keyword">return</span> self.intersect(nums2, nums1)</span><br><span class="line">        </span><br><span class="line">        m = collections.Counter()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums1:</span><br><span class="line">            m[num] += <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        res = list()</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums2:</span><br><span class="line">            <span class="keyword">if</span> (m.get(num, <span class="number">0</span>) &gt; <span class="number">0</span>):</span><br><span class="line">                res.append(num)</span><br><span class="line">                m[num] -= <span class="number">1</span></span><br><span class="line">                </span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+            <blockquote>
+<p><strong>每天一个简单题</strong></p>
+</blockquote>
+<h2 id="法1-哈希表求解"><a href="#法1-哈希表求解" class="headerlink" title="法1 . 哈希表求解"></a>法1 . 哈希表求解</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">intersect</span><span class="params">(self, nums1: List[int], nums2: List[int])</span> -&gt; List[int]:</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (len(nums1) &gt; len(nums2)):</span><br><span class="line">            <span class="keyword">return</span> self.intersect(nums2, nums1)</span><br><span class="line">        </span><br><span class="line">        m = collections.Counter()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums1:</span><br><span class="line">            m[num] += <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        res = list()</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums2:</span><br><span class="line">            <span class="keyword">if</span> (m.get(num, <span class="number">0</span>) &gt; <span class="number">0</span>):</span><br><span class="line">                res.append(num)</span><br><span class="line">                m[num] -= <span class="number">1</span></span><br><span class="line">                </span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
 
 <h2 id="法2-双指针排序"><a href="#法2-双指针排序" class="headerlink" title="法2 . 双指针排序"></a>法2 . 双指针排序</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">intersect</span><span class="params">(self, nums1: List[int], nums2: List[int])</span> -&gt; List[int]:</span></span><br><span class="line">        </span><br><span class="line">        nums1.sort()</span><br><span class="line">        nums2.sort()</span><br><span class="line">        len1, len2 = len(nums1), len(nums2)</span><br><span class="line">        index1 , index2 = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        res = list()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> index1 &lt; len1 <span class="keyword">and</span> index2 &lt; len2:</span><br><span class="line">            <span class="keyword">if</span> nums1[index1] &lt; nums2[index2]:</span><br><span class="line">                index1 += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums1[index1] &gt; nums2[index2]:</span><br><span class="line">                index2 += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                res.append(nums2[index2])</span><br><span class="line">                index1 += <span class="number">1</span></span><br><span class="line">                index2 += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
 
@@ -1992,221 +2181,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.pigwatcher.com/2019/11/16/C语言解决迷宫/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chan_yolo">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="PigWatcher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/16/C语言解决迷宫/" itemprop="url">C语言解决迷宫</a></h1>
-        
-
-        <div class="post-meta">
-			
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-16T11:11:33+08:00">
-                2019-11-16
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-11T13:35:53+08:00">
-                2020-03-11
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/11/16/C语言解决迷宫/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/11/16/C语言解决迷宫/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  845
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  4
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>#迷宫（C语言版）</p>
-<blockquote>
-<p>运用C语言栈，实现迷宫算法</p>
-</blockquote>
-<p>##思路</p>
-<ol>
-<li>从入口出发，我们首先规定：没经过一个点按照（东南西北）方向依次试探</li>
-<li>若能通过，则将迷宫数组的值改为curstep++,</li>
-<li>不能通过，则改变direction</li>
-<li>如果东南西北四个方向都不能通过，回溯，并将迷宫数组的值改为-1</li>
-<li>直到找到终点</li>
-</ol>
-<p>##具体实现</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/11/16/C语言解决迷宫/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -2252,7 +2233,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
