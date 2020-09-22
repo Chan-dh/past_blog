@@ -4,7 +4,7 @@
     <title>LeeCode-#704</title>
     <url>/2020/09/22/LeeCode-704/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>每天一个简单题</p>
+<p><strong>每天一个简单题</strong></p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">search</span><span class="params">(self, nums: List[int], target: int)</span> -&gt; int:</span></span><br><span class="line">        left, right = <span class="number">0</span>, len(nums)<span class="number">-1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">            mid = (left+right) // <span class="number">2</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> nums[mid] == target:</span><br><span class="line">                <span class="keyword">return</span> mid</span><br><span class="line">            <span class="keyword">elif</span> nums[mid] &lt;target:</span><br><span class="line">                left = mid + <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span> :</span><br><span class="line">                right = mid - <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
 
@@ -17,7 +17,7 @@
       </tags>
   </entry>
   <entry>
-    <title>力扣-#167</title>
+    <title>LeeCode-#167</title>
     <url>/2020/09/21/LeeCode-167/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
 <p><strong>每天一个简单题</strong></p>
@@ -42,7 +42,7 @@
       </tags>
   </entry>
   <entry>
-    <title>力扣-#69</title>
+    <title>LeeCode-#69</title>
     <url>/2020/09/20/LeeCode-69/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
 <p><strong>每天一个简单题</strong></p>
@@ -58,7 +58,7 @@
       </tags>
   </entry>
   <entry>
-    <title>力扣-#350</title>
+    <title>LeeCode-#350</title>
     <url>/2020/08/16/LeeCode-350/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
 <p><strong>每天一个简单题</strong></p>
